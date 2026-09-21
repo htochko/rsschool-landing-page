@@ -1,0 +1,198 @@
+:root {
+  --mobile-breakpoint: 380px;
+  --tablet-breakpoint: 768px;
+  --desctop-breakpoint: 1440px;  
+
+  --primary-text: #403F3D; /* + bg normal mode */
+  --primary-text-inverse: #E1D4C9;
+  --primary-text-accent: #B0907A;
+
+  --primary-border-inverse: #665F55;
+  --primary-border: #C1B6AD;
+  --overlay: rgb(64 63 61 / 80%); /* #403F3D */ 
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--primary-text);
+    background-color: var(--primary-text-inverse);
+    margin: 0px auto;
+}
+.caption {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 150%;
+}
+/* heading 1*/
+h1 {
+   font-size: 72px; 
+   font-weight: 600;
+   line-height:  105%
+}
+h1 .accent, h2 .accent {
+    font-style: italic;
+    color: var(--primary-text-accent);
+}
+
+h2 {
+   font-size: 60px; 
+   font-weight: 600;
+   line-height:  125%
+}
+
+h2 {
+   font-size: 24px; 
+   font-weight: 600;
+   line-height:  125%
+}
+
+button, .link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.burger-link {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+}
+/** fonts for mobile */
+@media screen and (min-width: 380px) and (max-width: 768px) {
+  h1 {
+    font-size: 42px; 
+    font-weight: 600;
+    color: red;
+    line-height:  115%
+  }
+  h2 {
+   font-size: 32px; 
+   font-weight: 600;
+   line-height:  125%
+  }
+}
+
+/* Base Navbar Styling */
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hide burger toggle checkbox by default */
+.burger-toggle {
+    display: none;
+}
+
+/* 1. First item (Logo) pinned to the left */
+.logo-item {
+    margin-right: auto;
+}
+
+/* 2. Middle links centered */
+.nav-links-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 auto; /* Pushes it to the center in flex layout */
+}
+
+/* 3. Right items (Theme, Burger, Menu) */
+.nav-right-items {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+
+/* Burger button hidden on desktop */
+.burger-item {
+    display: none;
+}
+
+/* General Link Styling */
+.navbar a {
+    text-decoration: none;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+/* General Link Styling */
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE STYLES (< 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        justify-content: space-between;
+        position: relative;
+    }
+
+    /* Reset margins for mobile flex layout */
+    .logo-item {
+        margin-right: 0;
+    }
+    
+    .nav-links-wrapper, .menu-item {
+        margin: 0;
+        display: none; /* Hidden by default, toggled via checkbox */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        gap: 1rem;
+    }
+
+    /* Show burger button icon on mobile */
+    .burger-item {
+        display: block;
+    }
+
+    /* Style the burger icon lines */
+    .burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .burger-btn span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #333;
+        transition: 0.3s;
+    }
+
+    /* When checkbox is checked, drop down the mobile menu */
+    .burger-toggle:checked ~ ul .nav-links-wrapper {
+        display: flex;
+    }
+
+    /* Optional: Animate burger to an 'X' when open */
+    .burger-toggle:checked ~ ul .burger-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger-toggle:checked ~ ul .burger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-toggle:checked ~ ul .burger-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

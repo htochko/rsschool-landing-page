@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,10 @@
     <body>
         <header>
          <!--3 columns |logo|| favorite coffee | About | Mobile app | Contect us || (slider) menu|-->   
-            <nav>
+         <!--<nav>
                 <ul>
                     <li>
-                        <a href="#">Resourse Coffee House</a>
+                    <a href="#">Resourse Coffee House</a>
                     </li>
                     <li><a href="#favorites">favorite coffee</a></li>
                     <li><a>About</a></li>
@@ -21,8 +22,43 @@
                     <li><a>Contect us</a></li>
                     <li><input type="checkbox" name="theme" /></li>
                     <li><a>Menu</a></li>
-                <h1></h1>
-            </nav>    
+                </ul>
+            </nav>
+        -->
+    <nav class="navbar">
+    <!-- Hidden checkbox for mobile burger menu state -->
+    <input type="checkbox" id="burger-toggle" class="burger-toggle">
+
+    <ul>
+        <!-- 1. Parked to the Left -->
+        <li class="logo-item">
+            <a href="#"><img src="assets/logo.svg" alt="Resourse Coffee House homepage"></a>
+        </li>
+
+        <!-- Wrapped container for links that go into the mobile burger menu -->
+        <div class="nav-links-wrapper">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#favorites">favorite coffee</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#mobileap">Mobile app</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </div>
+
+        <!-- 2. Parked to the Right -->
+        <div class="nav-right-items">
+            <li><input type="checkbox" name="theme" /></li>
+            <!-- Burger Icon Label (Visible only on mobile) -->
+            <li class="burger-item">
+                <label for="burger-toggle" class="burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </li>
+            <li class="menu-item"><a>Menu</a></li>
+        </div>
+    </ul>
+</nav>        
         </header>
         <main>
             <!--INDEX PAGE-->
@@ -57,7 +93,7 @@
                     </li>
                 </ul>
             </section>
-            <section id="services">
+            <section id="about">
                 <h2>Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
                 <!--2 columns vith vertically aligned slides-->
             </section>
@@ -127,7 +163,7 @@
                 <li><a>meta</a></li>
             </ul>
             </section>
-            <section>
+            <section id="contact">
              <h2>Contact Us</h2>
                 <ul>
                     <li>
