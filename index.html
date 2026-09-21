@@ -7,25 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resourse Coffe House</title>
+    <script src="src/app/index.js" type="text/javascript" defer></script>
 </head>
     <body>
         <header>
          <!--3 columns |logo|| favorite coffee | About | Mobile app | Contect us || (slider) menu|-->   
-         <!--<nav>
-                <ul>
-                    <li>
-                    <a href="#">Resourse Coffee House</a>
-                    </li>
-                    <li><a href="#favorites">favorite coffee</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Mobile app</a></li>
-                    <li><a>Contect us</a></li>
-                    <li><input type="checkbox" name="theme" /></li>
-                    <li><a>Menu</a></li>
-                </ul>
-            </nav>
-        -->
-    <nav class="navbar">
+        <nav class="navbar">
     <!-- Hidden checkbox for mobile burger menu state -->
     <input type="checkbox" id="burger-toggle" class="burger-toggle">
 
@@ -62,37 +49,62 @@
         </header>
         <main>
             <!--INDEX PAGE-->
-            <section id="hero">
-                <h1>Enjoy premium coffee at our charming cafe</h1>
+            <section id="hero" class="inverse">
+                <h1><span class="accent">Enjoy</span> premium coffee at our charming cafe</h1>
                 <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-                <a href="#menu">Menu</a>
+                <a href="#menu" class="link">Menu</a>
             </section>
-            <section id="favorites" class="slider">
-                <h2>Choose your favorite coffee</h2>
-                <ul>
-                    <li>
-                        <article>
-                            <a href="#product-frapuccino">
-                            <h3>S’mores Frapuccino</h3>
-                            <image 
-                                alt="Glass of frapuccino"
-                                src="" 
-                                onerror="this.src='https://placehold.co/120x120/2b6cb0/ffffff?text=Photo'" />
-                            <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                            <p>price</p>
-                            </a>
-                        </article>
-                    </li>
-                    <li>
-                        <!--product card-->
-                        <article></article>
-                    </li>
-                    <li>
-                        <!--product card-->
-                        <article></article>
-                    </li>
-                </ul>
-            </section>
+            <section id="favorites" class="slider-section">
+                <h2>Choose your <span class="accent">favorite</span> coffee</h2>
+                <div class="slider-container">
+                <!-- Left Arrow -->
+                <button class="slider-btn prev-btn" aria-label="Previous slide">&#10094;</button>
+        
+        <!-- Scrollable List -->
+        <ul class="slider-track" id="slider-track">
+            <li>
+                <article>
+                    <a href="#coffee-frapuccino" data-product="coffee-frapuccino" class="link">
+                        <img alt="Glass of frapuccino" src="assets/favorites-frapuccino.png" onerror="this.src='assets/thumbnail.png'" />
+                        <h3>S’mores Frapuccino</h3>
+                        <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                        <p>$5.50</p>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a href="#coffee-macciato" data-product="coffee-macciato" class="link">
+                        <img alt="Glass of macciato with foam" src="assets/favorites-macciato.png" onerror="this.src='assets/thumbnail.png'" />
+                        <h3>Caramel Macchiato</h3>
+                        <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                        <p>$5.00</p>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a href="#coffee-ice" data-product="coffee-ice" class="link">
+                        <img alt="Glass of coffee with ice cubes" src="assets/favorites-ice.png" onerror="this.src='assets/thumbnail.png'" />
+                        <h3>Ice coffee</h3>
+                        <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                        <p>$4.50</p>
+                    </a>
+                </article>
+            </li>
+        </ul>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next-btn" aria-label="Next slide">&#10095;</button>
+    </div>
+
+    <!-- 3 Underlines / Pagination Indicators -->
+    <div class="slider-pagination">
+        <span class="underline active" data-index="0"></span>
+        <span class="underline" data-index="1"></span>
+        <span class="underline" data-index="2"></span>
+    </div>
+</section>
             <section id="about">
                 <h2>Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
                 <!--2 columns vith vertically aligned slides-->
