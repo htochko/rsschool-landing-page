@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resourse Coffe House</title>
+</head>
+    <body>
+        <header>
+         <!--3 columns |logo|| favorite coffee | About | Mobile app | Contect us || (slider) menu|-->   
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Resourse Coffee House</a>
+                    </li>
+                    <li><a href="#favorites">favorite coffee</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Mobile app</a></li>
+                    <li><a>Contect us</a></li>
+                    <li><input type="checkbox" name="theme" /></li>
+                    <li><a>Menu</a></li>
+                <h1></h1>
+            </nav>    
+        </header>
+        <main>
+            <!--INDEX PAGE-->
+            <section id="hero">
+                <h1>Enjoy premium coffee at our charming cafe</h1>
+                <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+                <a href="#menu">Menu</a>
+            </section>
+            <section id="favorites" class="slider">
+                <h2>Choose your favorite coffee</h2>
+                <ul>
+                    <li>
+                        <article>
+                            <a href="#product-frapuccino">
+                            <h3>S’mores Frapuccino</h3>
+                            <image 
+                                alt="Glass of frapuccino"
+                                src="" 
+                                onerror="this.src='https://placehold.co/120x120/2b6cb0/ffffff?text=Photo'" />
+                            <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                            <p>price</p>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <!--product card-->
+                        <article></article>
+                    </li>
+                    <li>
+                        <!--product card-->
+                        <article></article>
+                    </li>
+                </ul>
+            </section>
+            <section id="services">
+                <h2>Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
+                <!--2 columns vith vertically aligned slides-->
+            </section>
+            <section id="mobileap">
+            
+                <h2>Download our app to start ordering</h2>
+                <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p> 
+                <ul>
+                    <li><a>Available on <h3>App Store</h3></a></li>
+                    <li><a>Available on <h3>Google Play</h3></a></li>
+                </ul>    
+            </section>    
+                <!--END OF INDEX PAGE-->
+                <!--MENU PAGE-->
+            <section id="menu">
+                <h2>Behind each of our cups hides an amazing surprise</h2>
+                <ul id="categories">
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>desert</li>
+                </ul>
+                <!--Product Cards-->
+                <ul>
+                    <li>
+                        <a href="#coffee">
+                            <h3>Irish Coffee</h3>
+                            <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                            <div>$7</div>
+                        </a>
+                    </li>
+                </ul>
+            </section>    
+            <!--END OF MENU PAGE-->
+
+            <!--MODALS-->
+            <div data-product="irish-coffee" 
+                //style="display: none;"
+                >
+                <image class="product-preview"/>
+                <h3>Irish Coffee</h3>
+                <p></p>
+                <h4>Size</h4>
+                <ul>
+                    <li><h5>S</h5></li>
+                    <li><h5>M</h5></li>
+                    <li><h5>L</h5></li>
+                </ul>
+                <h4>Additives</h4>
+                <ol>
+                    <li>Sugar</li>
+                    <li>Cynamon</li>
+                    <li>Syrup</li>
+                </ol>
+                <h4>Total</h4><div>$7</div>
+                <i>The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</i>
+                
+            </div>
+            <div id="modal-menu"></div>
+        </main>
+        <footer>
+            <!--2 columns | motto + socials || Contacts -->
+            <section id="socials">
+            <h2>Sip, Savor, Smile. It’s coffee time!</h2>    
+            <ul>
+                <li><a>X</a></li>
+                <li><a>instagram</a></li>
+                <li><a>meta</a></li>
+            </ul>
+            </section>
+            <section>
+             <h2>Contact Us</h2>
+                <ul>
+                    <li>
+                        <address class="fa-location">8558 Green Rd.,  LA</a>
+                    </li>
+                    <li>
+                        <a href="tel:+16035550123">+1 (603) 555-0123</a>
+                    </li>
+                    <li>
+                        <time>Mon-Sat:<span>9:00</span>-<span>23:00</span></time>
+                    </li>
+                </ul>       
+            </section>
+        </footer>    
+    </body>
+</html>    
