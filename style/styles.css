@@ -21,6 +21,9 @@ body {
     background-color: var(--primary-text-inverse);
     margin: 0px auto;
 }
+ul {
+    list-style-type: none;
+}
 .caption {
     font-size: 10px;
     font-weight: 600;
@@ -321,6 +324,36 @@ a.link {
 .img-wrapper img:hover {
     transform: scale(0.9)  translate(-7%, -7%);
 }
+
+section#mobileapp {
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url("./../assets/mobile-app.png");
+    padding: 2em calc(50% - 2em) 2em 2em;
+}
+
+section#mobileapp li a {
+    display: inline-block;
+    margin: 0.5em;
+    border: 1px solid var(--primary-text);
+}
+section#mobileapp li a h3 {
+    font-size: 1.4em;
+    line-height: 2em;
+}
+
+footer {
+    background-color: #665F55;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2em;
+    color: var(--primary-text-inverse);
+}
+footer h2, footer li, footer li a {
+    color: var(--primary-text-inverse);
+} 
 /* ==========================================
    MOBILE RESPONSIVE STYLES (< 768px)
    ========================================== */
@@ -395,7 +428,7 @@ a.link {
     .slider-btn { display: none; }
 
     /* about section : gallery */
-    .gallery-grid {
+    .gallery-grid, footer {
         grid-template-columns: 1fr; /* Switch to 1 column */
     }
 
@@ -405,4 +438,9 @@ a.link {
     .img-wrapper.primary {
         min-height: 50vw;
     }
+    section#mobileapp {
+    background-size: contain;
+    background-position: bottom;
+    padding: 2em 2em 50vh 2em;
+}
 }
