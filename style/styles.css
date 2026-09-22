@@ -1,0 +1,446 @@
+:root {
+  --mobile-breakpoint: 380px;
+  --tablet-breakpoint: 768px;
+  --desctop-breakpoint: 1440px;  
+
+  --primary-text: #403F3D; /* + bg normal mode */
+  --primary-text-inverse: #E1D4C9;
+  --primary-text-accent: #B0907A;
+
+  --primary-border-inverse: #665F55;
+  --primary-border: #C1B6AD;
+  --overlay: rgb(64 63 61 / 80%); /* #403F3D */ 
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--primary-text);
+    background-color: var(--primary-text-inverse);
+    margin: 0px auto;
+}
+ul {
+    list-style-type: none;
+}
+.caption {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 150%;
+}
+/* heading 1*/
+h1 {
+   font-size: 72px; 
+   font-weight: 600;
+   line-height:  105%
+}
+h1 .accent, h2 .accent {
+    font-style: italic;
+    color: var(--primary-text-accent);
+}
+
+h2 {
+   font-size: 60px; 
+   font-weight: 600;
+   line-height:  125%
+}
+
+h2 {
+   font-size: 24px; 
+   font-weight: 600;
+   line-height:  125%
+}
+
+button, .link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.burger-link {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+}
+/** fonts for mobile */
+@media screen and (min-width: 380px) and (max-width: 768px) {
+  h1 {
+    font-size: 42px; 
+    font-weight: 600;
+    line-height:  115%
+  }
+  h2 {
+   font-size: 32px; 
+   font-weight: 600;
+   line-height:  125%
+  }
+}
+
+/* Base Navbar Styling */
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hide burger toggle checkbox by default */
+.burger-toggle {
+    display: none;
+}
+
+/* 1. First item (Logo) pinned to the left */
+.logo-item {
+    margin-right: auto;
+}
+
+/* 2. Middle links centered */
+.nav-links-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 auto; /* Pushes it to the center in flex layout */
+}
+
+/* 3. Right items (Theme, Burger, Menu) */
+.nav-right-items {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+
+/* Burger button hidden on desktop */
+.burger-item {
+    display: none;
+}
+
+/* General Link Styling */
+.navbar a {
+    text-decoration: none;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+/* General Link Styling */
+.navbar a:hover {
+    text-decoration: underline;
+}
+/* Sections */
+section {
+    margin: 20px 1.5rem 2rem 1.5rem;
+    border-radius: 1rem;
+}
+section.inverse h1, section.inverse p {
+    color: var(--primary-text-inverse);
+}
+
+section#hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./../assets/hero.png");
+    padding: 2em calc(50% - 2em) 2em 2em;
+}
+
+section.slider-section h2,
+section.slider-section h3,
+section.slider-section p
+{
+    display: block;
+    text-align: center;
+}
+
+section.slider-section a {
+    text-decoration: none;
+}
+
+.slider-section {
+    position: relative;
+    max-width: 100vw - 4em;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* The Scroll-Snap Track (Handles mobile swiping) */
+.slider-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    width: 100%;
+    /* Hide scrollbars for a clean look */
+    scrollbar-width: none; 
+}
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Each slide item */
+.slider-track li {
+    flex: 0 0 100%; /* Shows 1 card at a time */
+    scroll-snap-align: center;
+    box-sizing: border-box;
+}
+
+/* Each slide image */
+.slider-track li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.slider-track img {
+    max-height: 40vh;       
+    width: auto;             
+    object-fit: contain;
+    margin: 0.5rem 0;
+}
+
+/* Side Arrows */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: var(--primary-border-inverse);
+    color: var(--primary-border-inverse);
+    background: none;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+.slider-btn:hover {
+    background-color: var(--primary-border-inverse);
+    color: var(--primary-text-inverse);
+    border-color: var(--primary-text-inverse);
+
+}
+.prev-btn { left: 0px; }
+.next-btn { right: 0px; }
+
+/* 3 Underlines (Pagination) */
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.5rem;
+}
+
+.slider-pagination .underline {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: var(--primary-text-accent);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-pagination .underline.active {
+    background-color: #403F3D; /* Active color matching your coffee theme */
+}
+
+a.link {
+    padding: 10px 2.5em;
+    border-radius: 999px;
+    border-color: var(--primary-border);
+    color: var(--primary-text);
+    text-decoration: none;
+    background-color: var(--primary-text-inverse);
+    border-color: var(--primary-border-inverse);
+}
+/* About section with flash moments gallery*/
+.photo-gallery {
+    max-width: 100vw - 4em;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Desktop: 2 Equal Columns */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    grid-template-rows: masonry;
+}
+
+.gallery-column {
+    width: 100%;
+    border-radius: 1em;
+    min-height: 20vw;
+    row-gap: 1em;
+}
+
+/* Wrapper with overflow: hidden handles the framed indent on hover */
+.img-wrapper {
+    width: 100%;
+    overflow: hidden;
+    grid-row: auto / span 1; 
+    border-radius: 20px;
+    margin-bottom: 1em;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+.img-wrapper.primary {
+    max-height: 40vw;
+    background-color: var(--primary-text);
+}
+.img-wrapper.secondary {
+    max-height: 25vw;
+    background-color: var(--primary-text-accent);
+}
+
+/* Image scaling & hover effect */
+.img-wrapper img {
+    transform: translate(-10%, -10%);
+    width: 115%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease-in-out;
+    margin: auto auto;
+}
+
+/* Hover effect: scales down ~10% inside the hidden overflow box */
+.img-wrapper img:hover {
+    transform: scale(0.9)  translate(-7%, -7%);
+}
+
+section#mobileapp {
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url("./../assets/mobile-app.png");
+    padding: 2em calc(50% - 2em) 2em 2em;
+}
+
+section#mobileapp li a {
+    display: inline-block;
+    margin: 0.5em;
+    border: 1px solid var(--primary-text);
+}
+section#mobileapp li a h3 {
+    font-size: 1.4em;
+    line-height: 2em;
+}
+
+footer {
+    background-color: #665F55;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2em;
+    color: var(--primary-text-inverse);
+}
+footer h2, footer li, footer li a {
+    color: var(--primary-text-inverse);
+} 
+/* ==========================================
+   MOBILE RESPONSIVE STYLES (< 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        justify-content: space-between;
+        position: relative;
+    }
+
+    /* Reset margins for mobile flex layout */
+    .logo-item {
+        margin-right: 0;
+    }
+    
+    .nav-links-wrapper, .menu-item {
+        margin: 0;
+        display: none; /* Hidden by default, toggled via checkbox */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        gap: 1rem;
+    }
+
+    /* Show burger button icon on mobile */
+    .burger-item {
+        display: block;
+    }
+
+    /* Style the burger icon lines */
+    .burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .burger-btn span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #333;
+        transition: 0.3s;
+    }
+
+    /* When checkbox is checked, drop down the mobile menu */
+    .burger-toggle:checked ~ ul .nav-links-wrapper {
+        display: flex;
+    }
+
+    /* Optional: Animate burger to an 'X' when open */
+    .burger-toggle:checked ~ ul .burger-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger-toggle:checked ~ ul .burger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-toggle:checked ~ ul .burger-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    section#hero {
+        padding: 1em 1em 1em 1em;
+    }
+    /* Hide arrows on mobile if you rely purely on swiping, or keep them small */
+    .slider-btn { display: none; }
+
+    /* about section : gallery */
+    .gallery-grid, footer {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+    }
+
+    .img-wrapper.secondary {
+        display: none;
+    }
+    .img-wrapper.primary {
+        min-height: 50vw;
+    }
+    section#mobileapp {
+    background-size: contain;
+    background-position: bottom;
+    padding: 2em 2em 50vh 2em;
+}
+}
