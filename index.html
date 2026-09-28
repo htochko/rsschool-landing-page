@@ -140,47 +140,45 @@
             <section id="menu" data-menu>
                 <h2>Behind each of our cups hides an amazing surprise</h2>
                 <ul id="categories">
-                    <li>coffee</li>
-                    <li>tea</li>
-                    <li>desert</li>
+                    <li data-category="coffee" class="active">coffee</li>
+                    <li data-category="tea">tea</li>
+                    <li data-category="dessert">dessert</li>
                 </ul>
                 <!--Product Cards-->
-                <ul>
-                    <li>
-                        <a href="#coffee">
-                            <h3>Irish Coffee</h3>
-                            <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                            <div>$7</div>
-                        </a>
-                    </li>
-                </ul>
+                <div class="products-grid" id="products-grid">
+                </div>
+                <div class="load-more-container">
+                <button id="load-more-btn" class="load-more-btn hidden">Load More</button>
+                </div>
             </section>    
             <!--END OF MENU PAGE-->
 
             <!--MODALS-->
-            <div data-product="irish-coffee" 
-                style="display: none;"
-                >
-                <image class="product-preview"/>
-                <h3>Irish Coffee</h3>
-                <p></p>
-                <h4>Size</h4>
-                <ul>
+            <div id="product-modal" class="modal-overlay">
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close modal">&times;</button>
+                    <div class="modal-img-wrapper">
+                    <img id="modal-img" src="" alt="" />
+                    </div>
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-desc"></p>
+                    <p id="modal-price" class="price"></p>
+                    <h4>Size</h4>
+                <ul class="size">
                     <li><h5>S</h5></li>
                     <li><h5>M</h5></li>
                     <li><h5>L</h5></li>
                 </ul>
                 <h4>Additives</h4>
-                <ol>
+                <ol class="additives">
                     <li>Sugar</li>
                     <li>Cynamon</li>
                     <li>Syrup</li>
                 </ol>
                 <h4>Total</h4><div>$7</div>
                 <i>The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</i>
-                
+                </div>
             </div>
-            <div id="modal-menu"></div>
         </main>
         <footer>
             <!--2 columns | motto + socials || Contacts -->
