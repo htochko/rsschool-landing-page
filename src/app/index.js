@@ -34,3 +34,38 @@ const observer = new IntersectionObserver((entries) => {
 }, { root: track, threshold: 0.6 });
 
 Array.from(track.children).forEach(slide => observer.observe(slide));
+window. addEventListener("DOMContentLoaded", (event) => { 
+
+const handleRoute = () => {
+    console.log('ROUTE HANDLED START')
+    const hash = globalThis.location.hash;
+    if (!(hash === '#menu')) {
+        document.querySelectorAll('section[data-index].inactive').forEach((element) => {
+            element.classList.remove('inactive')
+        })
+        document.querySelectorAll('section[data-menu]').forEach((element) => {
+            element.classList.add('inactive');
+            console.log('CLASS LIST:', )
+        })
+        return;
+    }
+    if (hash === '#menu') {
+        document.querySelectorAll('section[data-menu].inactive').forEach((element) => {
+            element.classList.remove('inactive')
+        })
+        document.querySelectorAll('section[data-index]').forEach((element) => {
+            
+            element.classList.add('inactive');
+            console.log()
+        })
+    }
+    console.log('ROUTE HANDLED')
+}
+
+window.addEventListener('hashchange', () => {
+    console.log('HASH CHANGED')
+    handleRoute();
+});
+
+handleRoute();
+})
