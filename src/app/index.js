@@ -248,7 +248,7 @@ handleRoute();
     console.log('GRID');
     const grid = document.getElementById('products-grid');
     const loadMoreBtn = document.getElementById('load-more-btn');
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const filterBtns = document.querySelectorAll('[data-category]');
 
     // Modal elements
     const modal = document.getElementById('product-modal');
