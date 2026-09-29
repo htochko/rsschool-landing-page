@@ -10,7 +10,7 @@ const products = [
         slug: 'irish-coffee',
         title: 'Irish coffee',
         description: 'Fragrant black coffee with Jameson Irish whiskey and whipped milk',
-        img: 'assets/coffee-irish.png',
+        img: 'assets/coffee-irish.jpg',
         price: '7$',
         category: 'coffee',
         favorite: false
@@ -55,25 +55,34 @@ const products = [
         slug: 'macchiato',
         title: 'Latte macchiato',
         description: 'Classic coffee with milk and Kahlua liqueur under a cap of frothed milk',
-        img: 'assets/coffee-macciato.jpg',
+        img: 'assets/coffee-macchiato.jpg',
         price: '7$',
         category: 'coffee',
         favorite: true
     },
     {
-        slug: 'cognac',
-        title: 'Coffee with cognac',
+        slug: 'ice',
+        title: 'Ice Coffee',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/coffee-cognac.jpg',
+        img: 'assets/coffee-ice.jpg',
         price: '7$',
         category: 'coffee',
         favorite: false
     },
     {
+       slug: 'cognac',
+        title: 'Coffee with cognac',
+        description: 'Fragrant black coffee with cognac and whipped cream',
+        img: 'assets/coffee-cognac.jpg',
+        price: '7$',
+        category: 'coffee',
+        favorite: false 
+    },
+    {
         slug: 'moroccan',
         title: 'Moroccan',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/tea-moroccan.ppg',
+        img: 'assets/tea-moroccan.png',
         price: '7$',
         category: 'tea',
         favorite: false
@@ -82,7 +91,7 @@ const products = [
         slug: 'cranberry',
         title: 'Cranberry',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/tea-cranberry.ppg',
+        img: 'assets/tea-cranberry.png',
         price: '7$',
         category: 'tea',
         favorite: false
@@ -91,7 +100,7 @@ const products = [
         slug: 'ginger',
         title: 'Ginger',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/tea-ginger.ppg',
+        img: 'assets/tea-ginger.png',
         price: '7$',
         category: 'tea',
         favorite: false
@@ -100,7 +109,7 @@ const products = [
         slug: 'sea',
         title: 'Sea buckthorn',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/tea-sea.ppg',
+        img: 'assets/tea-sea.png',
         price: '7$',
         category: 'tea',
         favorite: false
@@ -109,7 +118,7 @@ const products = [
         slug: 'marble',
         title: 'Marble cheesecake',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-marble.ppg',
+        img: 'assets/dessert-marble.png',
         price: '7$',
         category: 'dessert',
         favorite: false
@@ -118,7 +127,7 @@ const products = [
         slug: 'red',
         title: 'Red velvet',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-red.ppg',
+        img: 'assets/dessert-red.png',
         price: '7$',
         category: 'dessert',
         favorite: false
@@ -127,7 +136,7 @@ const products = [
         slug: 'cheescake',
         title: 'Cheescakes',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-cheescake.ppg',
+        img: 'assets/dessert-cheescake.png',
         price: '7$',
         category: 'dessert',
         favorite: false
@@ -136,7 +145,7 @@ const products = [
         slug: 'creme',
         title: 'Creme brulee',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-creme.ppg',
+        img: 'assets/dessert-creme.png',
         price: '7$',
         category: 'dessert',
         favorite: false
@@ -145,7 +154,7 @@ const products = [
         slug: 'pancake',
         title: 'Pancake',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-pankake.ppg',
+        img: 'assets/dessert-pancake.png',
         price: '7$',
         category: 'dessert',
         favorite: false
@@ -154,7 +163,7 @@ const products = [
         slug: 'honey',
         title: 'Red velvet',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-honey.ppg',
+        img: 'assets/dessert-honey.png',
         price: '7$',
         category: 'dessert',
         favorite: false
@@ -163,7 +172,7 @@ const products = [
         slug: 'chocolate',
         title: 'Chocolate cake',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-chocolate.ppg',
+        img: 'assets/dessert-chocolate.png',
         price: '7$',
         category: 'dessert',
         favorite: false
@@ -172,11 +181,11 @@ const products = [
         slug: 'forest',
         title: 'Red velvet',
         description: 'Fragrant black coffee with cognac and whipped cream',
-        img: 'assets/dessert-forest.ppg',
+        img: 'assets/dessert-forest.png',
         price: '7$',
         category: 'dessert',
         favorite: false
-    }
+    },
 ]
 
 // Arrow button click handlers

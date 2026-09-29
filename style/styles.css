@@ -387,8 +387,6 @@ ul#categories > li.active,  ul#categories > li:hover{
 
 ul.size, ol.additives {
     display: flex;
-    padding: 0 1.5rem;
-    width: fit-content;
 }
 
 
@@ -491,28 +489,6 @@ ul.size, ol.additives {
     padding: 2rem 1rem;
 }
 
-/* Category Filters */
-.category-filters {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.filter-btn {
-    padding: 0.5rem 1.25rem;
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.filter-btn.active, .filter-btn:hover {
-    background: #403F3D;
-    color: #fff;
-    border-color: #403F3D;
-}
-
 /* Responsive Grid Layout */
 .products-grid {
     display: grid;
@@ -556,15 +532,16 @@ ul.size, ol.additives {
 }
 
 .product-img-wrapper img {
-    width: 100%;
-    height: 100%;
+    width: 115%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.4s ease-in-out;
+    margin: auto auto;
 }
 
 /* Hover: Image scales out/in smoothly */
 .product-card:hover .product-img-wrapper img {
-    transform: scale(1.08);
+    transform: scale(0.9)  translate(-7%, -7%);
 }
 
 .product-info {
@@ -645,8 +622,6 @@ ul.size, ol.additives {
     width: 90%;
     position: relative;
     text-align: center;
-    max-height: 80vh;
-    overflow: scroll;
 }
 
 .modal-img-wrapper {
